@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,41 @@
 <style>
     body {
         background: linear-gradient(180deg, #455566, #283542);
-        background-repeat: no-repeat; /* Evita repetição */
-        background-size: cover; /* Faz o gradiente cobrir toda a área */
-        background-attachment: fixed; /* Fixa o fundo, para que ele não role com a página */
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-attachment: fixed; 
     }
     .navegacao{
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
     }
+    .navegacao img:hover {
+      width: 90px;
+      height: 90px;
+    }
 
 </style>
 <body>
-    
     <div class="container navegacao" >
+      <div class="logo">
         <img style="border-radius: 20px;" src="{% static 'img/ecommerce_logo.jpeg' %}" alt="" width="80px" height="80px">
-        <div class="text">
-            <input type="text" width="200px">
-        </div>
+       </div>
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-primary">1</button>
+            <button type="button" class="btn btn-primary">2</button>
+          
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="
+                -item" href="#">Dropdown link</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              </ul>
+            </div>
+          </div>
        
     </div>
 
